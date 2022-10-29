@@ -10,6 +10,7 @@ def voz_baja(texto):
 gritando = voz_alta
 susurrando = voz_baja
 
+
 # print(gritando ("Hola"))
 # print(susurrando ("Adios"))
 
@@ -25,8 +26,16 @@ susurrando = voz_baja
 
 def saludar(saludo, modo):
     saludo_formateado = modo(saludo)
+    linea = len(saludo_formateado)
+
+    if modo == voz_baja:
+        linea +=1
+
+    print("*" * linea)
+    print(saludo_formateado)
+    print("." * linea)
     
 
-    print("*" * len(saludo_formateado ))
-    print(saludo_formateado)
-    print("." * len(saludo_formateado))
+    # print("*" * len(saludo_formateado +" "))
+    # print(saludo_formateado)
+    # print("." * len(saludo_formateado +" "))
