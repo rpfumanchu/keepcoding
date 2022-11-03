@@ -3,11 +3,11 @@ ALFABETO = list("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ")
 def cesar(caracter, clave):
     posicion =ALFABETO.index(caracter)
     nuevaposicion = posicion + clave
-    # if nuevaposicion >= len(ALFABETO):
-    #     nuevaposicion -= len(ALFABETO)
-    # else:
-    #     return ALFABETO[nuevaposicion]
-    nuevaposicion = nuevaposicion % len(ALFABETO)
+
+    if nuevaposicion >= len(ALFABETO):
+        nuevaposicion -= len(ALFABETO)
+
+    # nuevaposicion = nuevaposicion % len(ALFABETO)
     return ALFABETO[nuevaposicion]
 
 def cifrar(mensaje, clave):
